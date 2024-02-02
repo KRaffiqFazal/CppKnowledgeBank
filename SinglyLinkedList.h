@@ -36,17 +36,20 @@ public:
   {
     int counter = 0;
     OneWayNode* position = head;
-    OneWayNode* tempAdder;
+    OneWayNode* tempAdder = new OneWayNode(data);
     while (counter <= indexToInsert && position != NULL)
     {
       if (indexToInsert == counter)
-      {
-        tempAdder->next = position;
-        tempAdder->data = data;
-        
+      { 
         if (counter == 0)
         {
+          tempAdder->next = head;
           head = tempAdder;
+        }
+        else
+        {
+          tempAdder->next = position->next;
+          position->next = tempAdder;
         }
       }
       position = position->next;
@@ -60,26 +63,24 @@ public:
   /// <param name="indexToDelete">Index to delete item from in list.</param>
   void remove(int indexToDelete)
   {
-    int counter = 0;
+    int counter = 1;
     OneWayNode* position = head;
-    OneWayNode* previousNode = NULL;
-    
+    OneWayNode* nextNode = head->next;
+    if (indexToDelete == 0)
+    {
+      head = nextNode;
+      delete position;
+      return;
+    }
     while (counter <= indexToDelete && position != NULL)
     {
       if (counter == indexToDelete)
       {
-        if (previousNode == NULL)
-        {
-          head = position->next;
-          delete position;
-        }
-        else
-        {
-          previousNode->next = position->next;
-          delete position;
-        }
+        position->next = nextNode->next;
+        delete nextNode;
       }
-      previousNode = position;
+      counter++;
+      nextNode = nextNode->next;
       position = position->next;
     }
   }

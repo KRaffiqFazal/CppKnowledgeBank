@@ -128,14 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C++KnowledgeBank.cpp" />
+    <ClCompile Include="SelfQueue.cpp" />
     <ClCompile Include="OneWayNode.cpp" />
     <ClCompile Include="Output.cpp" />
+    <ClCompile Include="SelfStack.cpp" />
     <ClCompile Include="SinglyLinkedList.cpp" />
     <ClCompile Include="TwoWayNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SelfQueue.h" />
     <ClInclude Include="OneWayNode.h" />
     <ClInclude Include="Output.h" />
+    <ClInclude Include="SelfStack.h" />
     <ClInclude Include="SinglyLinkedList.h" />
     <ClInclude Include="TwoWayNode.h" />
   </ItemGroup>

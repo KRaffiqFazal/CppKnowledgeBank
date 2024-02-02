@@ -8,5 +8,10 @@ public:
   string data;
   TwoWayNode* previous;
   TwoWayNode* next;
+
+  TwoWayNode(string dataToAdd)
+  {
+    data = dataToAdd;
+  }
 };
 
