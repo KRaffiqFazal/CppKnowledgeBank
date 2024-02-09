@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BBranch.cpp" />
+    <ClCompile Include="BTree.cpp" />
     <ClCompile Include="C++KnowledgeBank.cpp" />
     <ClCompile Include="SelfQueue.cpp" />
     <ClCompile Include="OneWayNode.cpp" />
@@ -136,6 +138,8 @@
     <ClCompile Include="TwoWayNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BBranch.h" />
+    <ClInclude Include="BTree.h" />
     <ClInclude Include="SelfQueue.h" />
     <ClInclude Include="OneWayNode.h" />
     <ClInclude Include="Output.h" />

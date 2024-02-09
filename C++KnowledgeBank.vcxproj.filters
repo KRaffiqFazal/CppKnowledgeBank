@@ -36,6 +36,12 @@
     <ClCompile Include="SelfStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BBranch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Output.h">
@@ -54,6 +60,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SelfStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BBranch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

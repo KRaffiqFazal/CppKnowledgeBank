@@ -1,15 +1,14 @@
 #pragma once
-#include <string>
 
 using namespace std;
 class TwoWayNode
 {
 public:
-  string data;
+  int data;
   TwoWayNode* previous;
   TwoWayNode* next;
 
-  TwoWayNode(string dataToAdd)
+  TwoWayNode(int dataToAdd)
   {
     data = dataToAdd;
   }

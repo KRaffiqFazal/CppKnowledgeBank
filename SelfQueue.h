@@ -7,13 +7,13 @@ class SelfQueue
     TwoWayNode* head;
     TwoWayNode* tail;
 
-    SelfQueue(string dataToAdd)
+    SelfQueue(int dataToAdd)
     {
       head = new TwoWayNode(dataToAdd);
       tail = head;
     }
 
-    void enqueue(string dataToAdd)
+    void enqueue(int dataToAdd)
     {
       TwoWayNode* newNode = new TwoWayNode(dataToAdd);
       tail->next = newNode;
@@ -22,7 +22,7 @@ class SelfQueue
       return;
     }
 
-    void deleteNode(int indexTodelete)
+    void deleteNode()
     {
       TwoWayNode* toDelete = head;
       head = head->next;
