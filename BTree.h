@@ -5,18 +5,19 @@
 #include <algorithm>
 #include <vector>
 #include <queue>
+#include <string>
 
 using namespace std;
 
 class BTree
 {
   private:
-    vector<int> specifiedTraversal;
+    vector<string> specifiedTraversal;
 
   public:
     BBranch* root;
     
-    BTree(int rootValue)
+    BTree(string rootValue)
     {
       root = new BBranch(rootValue);
     }
@@ -45,7 +46,7 @@ class BTree
       }
     }
 
-    vector<int> preOrderReturner(BBranch* branch, string option)
+    vector<string> preOrderReturner(BBranch* branch, string option)
     {
       specifiedTraversal.clear();
       if (option == "pre-order")

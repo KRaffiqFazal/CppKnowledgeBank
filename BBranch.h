@@ -1,12 +1,16 @@
 #pragma once
+#include <string>
+
+using namespace std;
+
 class BBranch
 {
   public:
-    int data;
+    string data;
     BBranch* left;
     BBranch* right;
 
-    BBranch(int valueToAddToBranch)
+    BBranch(string valueToAddToBranch)
     {
       data = valueToAddToBranch;
     }
