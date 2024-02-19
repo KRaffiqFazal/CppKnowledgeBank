@@ -1,16 +1,17 @@
 #pragma once
-#include <string>
-
+#include <iostream>
 using namespace std;
+template <typename T>
 class OneWayNode
 {
 public:
-  string data;
+  T data;
   OneWayNode* next;
 
-  OneWayNode(string dataToAdd)
+  OneWayNode(T dataToAdd)
   {
     data = dataToAdd;
+    next = NULL;
   }
 };
 

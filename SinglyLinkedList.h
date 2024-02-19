@@ -6,15 +6,15 @@ using namespace std;
 class SinglyLinkedList
 {
 public:
-  OneWayNode* head;
+  OneWayNode<char>* head;
 
   /// <summary>
   /// Creates a new singly linked list.
   /// </summary>
   /// <param name="data">Data to be held as the first item.</param>
-  SinglyLinkedList(string data)
+  SinglyLinkedList(char data)
   {
-    head = new OneWayNode(data);
+    head = new OneWayNode<char>(data);
     head->next = NULL;
   }
 
@@ -22,7 +22,7 @@ public:
   /// Pushes new data item to the start of the linked list.
   /// </summary>
   /// <param name="data">Data to be added.</param>
-  void pushStart(string data)
+  void pushStart(char data)
   {
     insert(data, 0);
   }
@@ -32,11 +32,11 @@ public:
   /// </summary>
   /// <param name="data">Data to be inserted.</param>
   /// <param name="indexToInsert">Position to be inserted into.</param>
-  void insert(string data, int indexToInsert)
+  void insert(char data, int indexToInsert)
   {
     int counter = 0;
-    OneWayNode* position = head;
-    OneWayNode* tempAdder = new OneWayNode(data);
+    OneWayNode<char>* position = head;
+    OneWayNode<char>* tempAdder = new OneWayNode<char>(data);
     while (counter <= indexToInsert && position != NULL)
     {
       if (indexToInsert == counter)
@@ -64,8 +64,8 @@ public:
   void remove(int indexToDelete)
   {
     int counter = 1;
-    OneWayNode* position = head;
-    OneWayNode* nextNode = head->next;
+    OneWayNode<char>* position = head;
+    OneWayNode<char>* nextNode = head->next;
     if (indexToDelete == 0)
     {
       head = nextNode;

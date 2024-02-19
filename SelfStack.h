@@ -1,30 +1,57 @@
 #pragma once
-#include <string>
+#include <iostream>
 #include "OneWayNode.h"
+
+template <typename T>
 class SelfStack
 {
 public:
-  OneWayNode* top;
+  OneWayNode<T>* top;
 
-  SelfStack(string dataToAdd)
+  SelfStack(T dataToAdd = NULL)
   {
-    top = new OneWayNode(dataToAdd);
+    if (dataToAdd == NULL)
+    {
+      top = NULL;
+    }
+    else
+    {
+      top = new OneWayNode<T>(dataToAdd);
+    }
   }
 
-  void push(string dataToAdd)
+  void push(T dataToAdd)
   {
-    OneWayNode* newNode = new OneWayNode(dataToAdd);
-    newNode->next = top;
+    OneWayNode<T>* newNode = new OneWayNode<T>(dataToAdd);
+    if (top != NULL)
+    {
+      newNode->next = top;
+    }
     top = newNode;
     return;
   }
 
-  void pop()
+  bool pop()
   {
-    OneWayNode* toDelete = top;
-    top = top->next;
-    delete toDelete;
-    return;
-  } 
+    bool returnVal = false;
+    if (top != NULL)
+    {
+      OneWayNode<T>* toDelete = top;
+      top = top->next;
+      delete toDelete;
+      returnVal = true;
+    }
+    return returnVal;
+  }
+
+  bool empty()
+  {
+    bool empty = true;
+    if (top != NULL)
+    {
+      empty = false;
+    }
+    return empty;
+  }
 };
 
