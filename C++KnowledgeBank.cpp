@@ -7,6 +7,8 @@
 #include "BTree.h"
 #include "SelfStack.h"
 #include <algorithm>
+#include <vector>
+#include "Sorting.h"
 
 // The purpose of this project will be to store implementations of all that I have learned within my algorithms
 // and data structures module.
@@ -20,9 +22,9 @@ double evaluatePostfix(string postfixExpression);
 
 int main()
 {
-  cout << separateData("A1B2C3") << endl;
+  /*cout << separateData("A1B2C3") << endl;
 
-  cout << evaluatePostfix("5+5-2*3");
+  cout << evaluatePostfix("5+10");
 
   BTree* expressionTree = new BTree("+");
   expressionTree->root->left = new BBranch("3");
@@ -32,7 +34,15 @@ int main()
   expressionTree->root->right->left->left = new BBranch("5");
   expressionTree->root->right->left->right = new BBranch("9");
 
-  cout << Solve(expressionTree->root);
+  cout << Solve(expressionTree->root);*/
+
+  vector<int> unsortedIntegers = { 3, 7, 12, 51, 42, 86, 99, -6, 21, 23, 0, 4, 3, 7 };
+  unsortedIntegers = Sorting::mergeSortAsc(unsortedIntegers);
+
+  for (int item : unsortedIntegers)
+  {
+    cout << item << endl;
+  }
 }
 
 int NewValue(int operand1, int operand2, string newOperator)
@@ -167,7 +177,7 @@ double evaluatePostfix(string postfixExpression)
     }
     else
     {
-      number += val;
+      number = val + number;
     }
   }
   if (number != "")

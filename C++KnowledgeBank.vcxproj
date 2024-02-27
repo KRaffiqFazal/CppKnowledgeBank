@@ -135,6 +135,7 @@
     <ClCompile Include="Output.cpp" />
     <ClCompile Include="SelfStack.cpp" />
     <ClCompile Include="SinglyLinkedList.cpp" />
+    <ClCompile Include="Sorting.cpp" />
     <ClCompile Include="TwoWayNode.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="Output.h" />
     <ClInclude Include="SelfStack.h" />
     <ClInclude Include="SinglyLinkedList.h" />
+    <ClInclude Include="Sorting.h" />
     <ClInclude Include="TwoWayNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
